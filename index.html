@@ -1,1 +1,363 @@
-Message is present
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      border-radius: 0px;
+      margin-bottom: 0px;
+    }
+
+    /* Remove the jumbotron's default bottom margin */ 
+    .jumbotron {
+      margin-bottom: 0;
+      background-color: rgb(170,15,15);
+      color: white;
+    }
+
+    .superContainer {
+      background-color: rgb(240,160,20);
+    }
+
+    .myModal {
+      margin-right: 15%;
+      margin-left: 15%;
+      margin-top: 10%;
+      margin-bottom: 10%;
+    }
+  
+    .snippet {
+      line-height: 1.5;
+      overflow: hidden;
+      visibility: hidden;
+      position: relative;
+      max-height: 6em;
+      max-width: 90%;
+    }
+
+    :hover.snippet {
+      margin: 0px auto 15px auto !important;
+      font-size: 1.5em !important;
+      overflow: visible;
+      visibility:visible;
+      margin: 75px 0 10px 0;
+    };
+    
+    #testColor {
+      color: red !important;
+    }
+
+    .theName{
+      color: red !important;
+      background-color: red !important;
+    }
+    .glyphicon {
+      height: 15px;
+      width: 15px;
+      padding-right: 25px;
+    }
+
+    .social {
+      height: 15px;
+      width: 15px;
+      padding-right: 25px;
+    }
+
+    /*:hover.glyphicon-envelope {
+      background-color: blue;
+      height: 50px;
+      width: 50px;
+    }*/
+
+    img {
+      width: 90%;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+     background-color: #f2f2f2;
+     padding: 25px;
+   }
+   </style>
+ </head>
+ <body>
+
+  <div class="jumbotron">
+    <div class="container text-center">
+      <h1>The Faculty of Seattle Academy of Arts and Sciences</h1>      
+      <p>(Click on a profile to learn more)</p>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="http://seattleacademy.org/">Seattle Academy</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Faculty</a></li>
+          <!-- <li class="active" data-toggle="modal" data-target="myModal">Test Modal</a></li> -->
+            <!-- Trigger the modal with a button -->
+            <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Test Modal</button> -->
+
+            <!-- Modals -->
+
+            <div id="steveModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <strong><h3 class="modal-title">Steve Retz</h3></strong>
+                  </div>
+                  <div class="modal-body">
+                    <p><h4>(History Department Chair), B.A., St. Olaf College; M.A., Brown University.</h4> Prior to SAAS, Steve taught high school students and adults in Tangier, Morocco, and also worked as a site coordinator in an after-school tutoring program for at-risk children. Says Steve, “I want to help students learn that history is so much more than names and dates. The really important questions to ask about history go beyond ‘what happened,’ and focus on ‘how’ and ‘why.’ This makes history relevant for us in the present.” Steve leads a contingent of SAAS youth legislature students to Olympia each year to write bills that frequently make it onto the docket for debate on the senate and house floor.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href = "http://www.google.com"><span class="glyphicon glyphicon-envelope"></span></a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            
+            <div id="julioModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <strong><h3 class="modal-title">Julio Bustamante</h3></strong>
+                  </div>
+                  <div class="modal-body">
+                    <p><h4>(Spanish), B.A., University of Washington; certification, University of North Carolina.</h4> Julio has taught at both the middle and high school levels at Lakeside and Evergreen. Prior to moving to Seattle, he also taught Spanish at North Mecklenburg High School and the Davidson Center in North Carolina and was a private instructor, tutor, and teacher in Katmandu, Nepal. He has been recognized by the Ambassador of the US for his leadership activity in Nepal.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href = "http://www.google.com"><span class="glyphicon glyphicon-envelope"></span></a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div id="markModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <strong><h3 class="modal-title">Mark Hoover</h3></strong>
+                  </div>
+                  <div class="modal-body">
+                    <p><h4>(Vocal), B.A., University of the Pacific; M.A., Ph.D., University of Washington.</h4> Mark came to Seattle Academy from his position as associate director of Northwest Choirs. He has led our top-level vocal group, The Onions, to first place finishes in numerous national competitions. Several of his students have won recognition from the National Advancement for the Arts.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href = "http://www.google.com"><span class="glyphicon glyphicon-envelope"></span></a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            
+            <div id="jasonModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <strong><h3 class="modal-title">Jason Gough</h3></strong>
+                  </div>
+                  <div class="modal-body">
+                    <p><h4>(College Advising; English), B.A., University of Puget Sound; M.A., University of Wisconsin-Milwaukee; M.A., Breadloaf School.</h4> Jason taught at the Western Reserve Academy in Hudson, Ohio, from 2007-2010. He has taught everything from Freshman Composition to AP Literature and Composition and served as a student advisor, club advisor, and coached track, cross country, and football. He also worked in admissions at the post-secondary level at the University of Puget Sound.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href = "https://en.wikipedia.org/wiki/Gough_Island"><span class="glyphicon glyphicon-globe-af"></span></a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            
+            <div id="shelleyModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <strong><h3 class="modal-title">Shelley Kunasek</h3></strong>
+                  </div>
+                  <div class="modal-body">
+                    <p><h4>(Science), B.A., Pomona College; M.I.T., Ph.D,  University of Washington.</h4> Shelley taught science at the middle and high school level, as well as at the University of Washington and Highline Community College. She also served as a research assistant with the Earth and Space Sciences & Atmospheric Sciences and the UW. Shelley is the conference founder of the UW Graduate Climate Conference, and was a member of the Seattle Riot 2005 National Champion Women’s Ultimate Frisbee Team. In addition to living in West Africa, France, and Greenland, Shelley’s outside interests include crafting, gardening, hiking, and cross country skiing.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href = "http://www.google.com"><span class="glyphicon glyphicon-envelope"></span></a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div id="davidModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <strong><h3 class="modal-title">David Johns</h3></strong>
+                  </div>
+                  <div class="modal-body">
+                    <p> <h4>(Mathematics; Coach), B.A., University of California at San Diego; M.E., Seattle University.</h4> David came to Seattle Academy after several years as a math instructor at Seattle Country Day School, while also serving as their athletic director. Before that, he was a middle school computer teacher and specialist in La Jolla, California. David says, simply, “I adore teaching and coaching! I thoroughly enjoy creating enthusiastic, dynamic, and challenging lessons that engage students.”</p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href = "http://www.google.com"><span class="glyphicon glyphicon-envelope"></span></a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div id="willyModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <strong><h3 class="modal-title">Willy Felton</h3></strong>
+                  </div>
+                  <div class="modal-body">
+                    <p><h4>(Mathematics; Technology), B.S, Willamette University; M.A., Western Governors University.</h4> Willy has taught mathematics (including algebra, geometry, pre-calculus, and trigonometry) as well as computer science at the Community School in Sun Valley, Idaho, as well as Forest Ridge School of the Sacred Heart here in Seattle. While at the Community School he also served as the Assistant Director of Technology. In addition, Willy coaches basketball, has been an outdoor trip leader, and was a software developer for AT&T Wireless.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href = "https://www.facebook.com/WillyFelton"><span class="social social-facebook"></span></a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+        </ul> -->
+      </div>
+    </div>
+  </nav>
+<div class = "superContainer"><br><br>
+  <div class="container">    
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Steve Retz</div>
+            <div class="panel-body" data-toggle="modal" data-target="#steveModal"><img src="http://saasmath.seattleacademy.org/facultypics/Retz-Steve.jpg" class="img-responsive" style="width:100%" alt="Image">
+
+              <!-- <div class = "snippet">"History teacher at Seattle Academy."</div> -->
+            </div>
+          <div class="panel-footer">10th Grade History Teacher</div>
+        </div>
+      </div>
+      <div class="col-sm-4"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">Julio Bustamante</div>
+          <div class="panel-body" data-toggle="modal" data-target="#julioModal"><img src="http://saasmath.seattleacademy.org/facultypics/Bustamante-Julio.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer">Spanish 4 Honors Teacher</div>
+        </div>
+      </div>
+      <div class="col-sm-4"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">Mark <span class = "testColor">Hoover</span></div>
+          <div class="panel-body" data-toggle="modal" data-target="#markModal"><img src="http://saasmath.seattleacademy.org/facultypics/Hoover-Mark.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer">Vocal Teacher</div>
+        </div>
+      </div>
+    </div>
+  </div><br>
+
+  <div class="container">    
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Jason Gough</div>
+          <div class="panel-body" data-toggle="modal" data-target="#jasonModal"><img src="http://saasmath.seattleacademy.org/facultypics/Gough-Jason.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer">10th Grade English</div>
+        </div>
+      </div>
+      <div class="col-sm-4"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">Shelly Kunasek</div>
+          <div class="panel-body" data-toggle="modal" data-target="#shelleyModal"><img src="http://saasmath.seattleacademy.org/facultypics/Kunasek-Shelley.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer">Chemistry Teacher</div>
+        </div>
+      </div>
+      <div class="col-sm-4"> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">David Johns</div>
+          <div class="panel-body" data-toggle="modal" data-target="#davidModal"><img src="http://saasmath.seattleacademy.org/facultypics/Johns-David.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer">Software Development Teacher</div>
+        </div>
+      </div>
+    </div>
+  </div><br>
+
+  <div class="container">    
+    <div class="row">
+      <div class="col-sm-4">
+        <span id = "testColor"></span>
+          <!-- <div class="panel panel-primary">
+            <div class="panel-heading">Gabe Cronin</div>
+            <div class="panel-body"><img src="http://saasmath.seattleacademy.org/facultypics/Cronin-Gabe.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+            <div class="panel-footer">Lorem ipsum...</div>
+          </div> -->
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading">Willy Felton</div>
+            <div class="panel-body" data-toggle="modal" data-target="#willyModal"><img src="http://saasmath.seattleacademy.org/facultypics/Felton-Willy.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+            <div class="panel-footer">Pre-Calculus Teacher</div>
+          </div>
+        </div>
+        <!-- <div class="col-sm-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading">Gerald Elliott</div>
+            <div class="panel-body"><img src="http://saasmath.seattleacademy.org/facultypics/Elliott-Gerald.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+            <div class="panel-footer">Lorem ipsum...</div>
+          </div>
+        </div> -->
+      </div>
+    </div><br><br>
+</div>
+    <footer class="container-fluid text-center">
+      <p>Thank you for visiting the SAAS faculty page.</p>  
+    <!-- <form class="form-inline">Get deals:
+      <input type="email" class="form-control" size="50" placeholder="Email Address">
+      <button type="button" class="btn btn-danger">Sign Up</button>
+    </form> -->
+  </footer>
+
+</body>
+</html>
